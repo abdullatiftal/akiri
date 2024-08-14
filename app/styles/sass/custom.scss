@@ -1,0 +1,163 @@
+// border
+.border-custom {
+    border-image: linear-gradient(to right, #d82e4a, rgba(216, 46, 74, 0)) 1;
+}
+
+.theme-gradient-border {
+    background: $theme-gradient-border;
+}
+
+// sidebar
+.sidebar {
+    &-menu {
+        &_item {
+            position: relative;
+
+            &.is-active {
+                padding-top: 19px;
+                padding-bottom: 19px;
+
+                &::before {
+                    content: '';
+                    width: 130%;
+                    height: 100%;
+                    left: -17px;
+                    background: $theme-gradient-menu;
+                    position: absolute;
+                    z-index: 1;
+                    padding: 15px 25px 15px 0;
+                    @apply rounded-tl-lg rounded-tr-none rounded-br-none rounded-bl-lg;
+                }
+            }
+
+            >div,
+            p {
+                z-index: 2;
+            }
+        }
+    }
+}
+
+// buttons
+.btn {
+    @apply bg-grey py-4 px-14 rounded-full border-[0.5px] border-solid border-[#00000017];
+
+    &.is-current {
+        background: $theme-gradient-1;
+        @apply text-white font-bold;
+    }
+
+    &-default {
+        &:disabled {
+            @apply bg-grey border-[0.5px] border-solid border-[#00000017];
+        }
+
+        background: $theme-gradient-1;
+        @apply text-white font-bold;
+    }
+}
+
+// form components
+form {
+    label {
+        .required {
+            color: #F40000;
+        }
+    }
+
+    input:not(.checkbox) {
+        @apply block w-[100%] border-[0.5px] border-solid border-[#101B2C36] rounded-[3px] bg-white pl-3 pr-[16px] py-[10px] placeholder-text ring-[0.5px] ring-inset ring-[#101B2C36] transition duration-200 ease-in-out hover:ring-primary/50 focus:border-primary focus:outline-none focus:ring-[0.5px] focus:ring-inset focus:ring-primary leading-6;
+        @apply sm:min-w-[480px] w-full;
+    }
+
+    .react-tel-input {
+        .form-control {
+            @apply w-[100%] border-[0.5px] border-solid border-[#101B2C36] rounded-[3px] bg-white ring-[0.5px] ring-inset ring-[#101B2C36] transition duration-200 ease-in-out hover:ring-primary/50 focus:border-primary focus:outline-none focus:ring-[0.5px] focus:ring-inset focus:ring-primary leading-6;
+            font-size: inherit;
+            letter-spacing: inherit;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 16px;
+            line-height: 1.5rem;
+            height: auto;
+
+            &:focus+.flag-dropdown {
+                border-color: #101B2C36;
+            }
+        }
+
+        .flag-dropdown {
+            border-right: none
+        }
+
+    }
+
+    .checkbox-container {
+        @apply flex gap-[12px]
+    }
+
+    input.checkbox {
+        @apply leading-6;
+        accent-color: $secondary;
+    }
+
+    textarea {
+        @apply block w-[100%] border-[0.5px] border-solid border-[#101B2C36] rounded-[15px] bg-white pl-3 pr-[16px] py-[10px] placeholder-text ring-[0.5px] ring-inset ring-[#101B2C36] transition duration-200 ease-in-out hover:ring-primary/50 focus:border-primary focus:outline-none focus:ring-[0.5px] focus:ring-inset focus:ring-primary leading-6;
+    }
+
+    textarea:not(.formside-textarea) {
+        @apply sm:min-w-[480px] w-full;
+    }
+
+    textarea.formside-textarea {
+        @apply rounded-[3px];
+    }
+}
+
+.react-datepicker__input-container {
+
+    .input-calendar_icon.react-datepicker__calendar-icon {
+        width: 22px;
+        height: 22px;
+        right: 10px;
+        top: 12px;
+        padding: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_14_2240' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_14_2240)'%3E%3Cpath d='M4.86531 19.7083C4.40227 19.7083 4.01034 19.5479 3.6895 19.227C3.36867 18.9062 3.20825 18.5143 3.20825 18.0512V5.78207C3.20825 5.31903 3.36867 4.92709 3.6895 4.60626C4.01034 4.28542 4.40227 4.12501 4.86531 4.12501H6.13455V2.18591H7.54477V4.12501H14.4903V2.18591H15.8652V4.12501H17.1345C17.5975 4.12501 17.9895 4.28542 18.3103 4.60626C18.6311 4.92709 18.7915 5.31903 18.7915 5.78207V18.0512C18.7915 18.5143 18.6311 18.9062 18.3103 19.227C17.9895 19.5479 17.5975 19.7083 17.1345 19.7083H4.86531ZM4.86531 18.3333H17.1345C17.205 18.3333 17.2697 18.3039 17.3284 18.2452C17.3872 18.1864 17.4166 18.1218 17.4166 18.0512V9.44873H4.58323V18.0512C4.58323 18.1218 4.61261 18.1864 4.67137 18.2452C4.73014 18.3039 4.79479 18.3333 4.86531 18.3333ZM4.58323 8.07376H17.4166V5.78207C17.4166 5.71154 17.3872 5.6469 17.3284 5.58812C17.2697 5.52936 17.205 5.49998 17.1345 5.49998H4.86531C4.79479 5.49998 4.73014 5.52936 4.67137 5.58812C4.61261 5.6469 4.58323 5.71154 4.58323 5.78207V8.07376ZM10.9999 12.9038C10.7754 12.9038 10.5842 12.8248 10.4261 12.6667C10.268 12.5087 10.189 12.3174 10.189 12.0929C10.189 11.8685 10.268 11.6772 10.4261 11.5192C10.5842 11.3611 10.7754 11.2821 10.9999 11.2821C11.2244 11.2821 11.4156 11.3611 11.5737 11.5192C11.7317 11.6772 11.8108 11.8685 11.8108 12.0929C11.8108 12.3174 11.7317 12.5087 11.5737 12.6667C11.4156 12.8248 11.2244 12.9038 10.9999 12.9038ZM7.33323 12.9038C7.10877 12.9038 6.91751 12.8248 6.75944 12.6667C6.60138 12.5087 6.52235 12.3174 6.52235 12.0929C6.52235 11.8685 6.60138 11.6772 6.75944 11.5192C6.91751 11.3611 7.10877 11.2821 7.33323 11.2821C7.55769 11.2821 7.74895 11.3611 7.90702 11.5192C8.06508 11.6772 8.14411 11.8685 8.14411 12.0929C8.14411 12.3174 8.06508 12.5087 7.90702 12.6667C7.74895 12.8248 7.55769 12.9038 7.33323 12.9038ZM14.6666 12.9038C14.4421 12.9038 14.2508 12.8248 14.0928 12.6667C13.9347 12.5087 13.8557 12.3174 13.8557 12.0929C13.8557 11.8685 13.9347 11.6772 14.0928 11.5192C14.2508 11.3611 14.4421 11.2821 14.6666 11.2821C14.891 11.2821 15.0823 11.3611 15.2404 11.5192C15.3984 11.6772 15.4774 11.8685 15.4774 12.0929C15.4774 12.3174 15.3984 12.5087 15.2404 12.6667C15.0823 12.8248 14.891 12.9038 14.6666 12.9038ZM10.9999 16.5C10.7754 16.5 10.5842 16.421 10.4261 16.2629C10.268 16.1048 10.189 15.9136 10.189 15.6891C10.189 15.4646 10.268 15.2734 10.4261 15.1153C10.5842 14.9572 10.7754 14.8782 10.9999 14.8782C11.2244 14.8782 11.4156 14.9572 11.5737 15.1153C11.7317 15.2734 11.8108 15.4646 11.8108 15.6891C11.8108 15.9136 11.7317 16.1048 11.5737 16.2629C11.4156 16.421 11.2244 16.5 10.9999 16.5ZM7.33323 16.5C7.10877 16.5 6.91751 16.421 6.75944 16.2629C6.60138 16.1048 6.52235 15.9136 6.52235 15.6891C6.52235 15.4646 6.60138 15.2734 6.75944 15.1153C6.91751 14.9572 7.10877 14.8782 7.33323 14.8782C7.55769 14.8782 7.74895 14.9572 7.90702 15.1153C8.06508 15.2734 8.14411 15.4646 8.14411 15.6891C8.14411 15.9136 8.06508 16.1048 7.90702 16.2629C7.74895 16.421 7.55769 16.5 7.33323 16.5ZM14.6666 16.5C14.4421 16.5 14.2508 16.421 14.0928 16.2629C13.9347 16.1048 13.8557 15.9136 13.8557 15.6891C13.8557 15.4646 13.9347 15.2734 14.0928 15.1153C14.2508 14.9572 14.4421 14.8782 14.6666 14.8782C14.891 14.8782 15.0823 14.9572 15.2404 15.1153C15.3984 15.2734 15.4774 15.4646 15.4774 15.6891C15.4774 15.9136 15.3984 16.1048 15.2404 16.2629C15.0823 16.421 14.891 16.5 14.6666 16.5Z' fill='%23181D42'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &.react-datepicker__view-calendar-icon input {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0.75rem;
+        padding-right: 16px
+    }
+}
+
+.form-side {
+
+    .dropdown-search,
+    .dropdown-search input {
+        @apply sm:min-w-[100%]
+    }
+}
+
+.risk-color {
+    &-red {
+        color: #C00000;
+    }
+
+    &-orange {
+        color: #FFBF00;
+    }
+
+    &-yellow {
+        color: #FFFF00;
+    }
+
+    &-green {
+        color: #92D051;
+    }
+}

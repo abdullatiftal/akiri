@@ -1,0 +1,193 @@
+@layer base {
+    @font-face {
+        font-family: 'SuisseIntl';
+        font-style: normal;
+        font-weight: 300;
+        src: url(/fonts/Suisse_Intl_Light.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: 'SuisseIntl';
+        font-style: normal;
+        font-weight: 400;
+        src: url(/fonts/Suisse_Intl_Regular.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: 'SuisseIntl';
+        font-style: normal;
+        font-weight: 500;
+        src: url(/fonts/Suisse_Intl_Medium.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: 'SuisseIntl';
+        font-style: normal;
+        font-weight: 700;
+        src: url(/fonts/Suisse_Intl_Bold.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: 'SuisseIntl';
+        font-style: normal;
+        font-weight: 900;
+        src: url(/fonts/Suisse_Intl_Book.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: '"Aeonik"';
+        font-style: normal;
+        font-weight: 400;
+        src: url(/fonts/Aeonik-Regular.otf) format('otf');
+    }
+}
+
+body {
+    color: $primary;
+    background: #f3f7fd;
+    font-family: $font-body;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+// /* Remove default margin and padding for all elements */
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// /* Set a consistent font and line-height for body and other text elements */
+// /* Remove list styles */
+// ul,
+// ol {
+//     /* list-style: none; */
+// }
+
+// ul {
+//     margin-block-start: 1em;
+//     margin-block-end: 1em;
+//     margin-inline-start: 0px;
+//     margin-inline-end: 0px;
+//     padding-inline-start: 40px;
+// }
+
+// /* Remove default link styles */
+// a {
+//     text-decoration: none;
+//     color: inherit;
+// }
+
+// /* Remove default table spacing */
+// table {
+//     border-collapse: collapse;
+//     border-spacing: 0;
+// }
+
+// /* Remove default fieldset, legend, button, input, and textarea styling */
+// fieldset {
+//     border: none;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// legend {
+//     padding: 0;
+// }
+
+// button,
+// input,
+// select,
+// textarea {
+//     font-family: inherit;
+//     font-size: inherit;
+//     color: inherit;
+//     margin: 0;
+// }
+
+// /* Remove default button, input, and textarea styling */
+// button,
+// input,
+// select,
+// textarea {
+//     border: none;
+//     outline: none;
+//     background: none;
+// }
+
+// /* Ensure block-level elements fill their container */
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// main,
+// menu,
+// nav,
+// section,
+// summary {
+//     display: block;
+// }
+
+// /* Ensure images are responsive */
+// img {
+//     max-width: 100%;
+//     height: auto;
+//     border: none;
+// }
+
+// /* Remove default form element margin and padding */
+// form {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// /* Remove default iframe border */
+// iframe {
+//     border: none;
+// }
+
+// /* Remove default hr styling */
+// hr {
+//     border: none;
+//     border-top: 1px solid #ccc;
+//     margin: 1em 0;
+// }
+
+// /* Reset strong and b elements */
+// strong,
+// b {
+//     font-weight: bold;
+// }
+
+// /* Reset emphasis and italic elements */
+// em,
+// i {
+//     font-style: italic;
+// }
+
+// /* Remove default quote styling */
+// blockquote {
+//     margin: 0;
+//     padding: 0;
+//     quotes: none;
+// }
+
+// blockquote:before,
+// blockquote:after {
+//     content: '';
+//     content: none;
+// }
+
+// p {
+//     margin-top: 0;
+//     margin-bottom: 1rem;
+// }
+
+// p:last-child {
+//     margin-bottom: 0px;
+// }
